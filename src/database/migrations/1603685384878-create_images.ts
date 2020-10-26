@@ -27,7 +27,7 @@ export class createImages1603685384878 implements MigrationInterface {
                 {
                     name: 'ImageOrphanage',
                     columnNames: ['orphanage_id'],
-                    referencedTableName: 'orphanage',
+                    referencedTableName: 'orphanages',
                     referencedColumnNames: ['id'],
                     onUpdate: 'CASCADE',
                     onDelete: 'CASCADE'
@@ -39,5 +39,4 @@ export class createImages1603685384878 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable('images');
     }
-
 }
